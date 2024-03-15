@@ -25,7 +25,7 @@ class Account(Base):
             'user_id': self.user_id,
             'account_type': self.account_type,
             'account_number': self.account_number,
-            'balance': str(self.balance),
+            'balance': '{:.2f}'.format(self.balance),
             'created_at': self.created_at,
             'updated_at': self.updated_at
         }

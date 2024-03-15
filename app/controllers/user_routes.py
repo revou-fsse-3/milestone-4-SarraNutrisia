@@ -5,6 +5,7 @@ from app.models.user import User
 import bcrypt
 from flask_jwt_extended import create_access_token, jwt_required, unset_jwt_cookies
 
+
 # Creating Blueprint
 user_routes = Blueprint('user_routes', __name__)
 

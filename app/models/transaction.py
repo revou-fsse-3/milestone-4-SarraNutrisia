@@ -25,7 +25,7 @@ class Transaction(Base):
             'id': self.id,
             'from_account_id': self.from_account_id,
             'to_account_id': self.to_account_id,
-            'amount': str(self.amount),
+            'amount': '{:.2f}'.format(self.amount),
             'type': self.type,
             'description': self.description,
             'created_at': self.created_at
