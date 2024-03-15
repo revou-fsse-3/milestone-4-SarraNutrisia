@@ -1,14 +1,23 @@
 from flask import Flask
 from dotenv import load_dotenv
-from app.controllers.user_route import user_route
+from app.controllers.user_routes import user_routes
+from flask_jwt_extended import JWTManager
+import os
 
+# Load .venv
 load_dotenv()
 
+# Create Flask app
 app = Flask(__name__)
 
-#Register Blueprint
-app.register_blueprint(user_route)
+# Define JWT secret key
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
+jwt = JWTManager(app)
 
+#Register Blueprint
+app.register_blueprint(user_routes)
+
+#Set the root route
 @app.route('/')
 def index():
     return "Hello, World!"
