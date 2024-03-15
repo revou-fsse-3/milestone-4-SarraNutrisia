@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 import bcrypt
 from flask_jwt_extended import create_access_token, jwt_required, unset_jwt_cookies
 
-#Creating Blueprint
+# Creating Blueprint
 user_routes = Blueprint('user_routes', __name__)
 
 #Get Message Method for Register
@@ -130,7 +130,8 @@ def get_user_by_id(user_id):
     except Exception as e:
         # Error getting user by ID
         return {'error': f'Error has occured: {e}'}, 500
-    
+
+# Put Method for Update Data User By ID    
 @user_routes.route('/users/<int:user_id>', methods=['PUT'])
 @jwt_required()
 def update_user_by_id(user_id):
@@ -164,7 +165,9 @@ def update_user_by_id(user_id):
             # Error update user by ID
             session.rollback()
             return {'error': f'Error has occured: {e}'}, 500
-        
+
+
+ # Delete Method for Deleting Data User By ID       
 @user_routes.route('/users/<int:user_id>', methods=['DELETE'])
 @jwt_required()
 def delete_user_by_ID(user_id):

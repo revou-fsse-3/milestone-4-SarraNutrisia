@@ -31,6 +31,6 @@ class Transaction(Base):
             'created_at': self.created_at
         }
         
-    # Return data transaction as a string
+    # Return data transaction as string
     def __repr__(self):
         return f'<Transaction {self.id}>'
