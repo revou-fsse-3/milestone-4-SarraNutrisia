@@ -220,10 +220,10 @@ def get_transactions_by_account(account_id):
             
             # Checking Owner of The Account
             if check_account_ownership(account_id, user_id):
-                
+                print(account_id)    
                 try:
                     # Fetch transaction
-                    transactions = session.query(Transaction).filter_by(from_account_id=account_id).all()
+                    transactions = session.query(Transaction).filter_by(id=account_id).all()
                     return {'transaction by ID': [transaction.to_dict() for transaction in transactions]}, 200
                 
                 except Exception as e:

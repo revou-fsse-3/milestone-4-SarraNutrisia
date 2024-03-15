@@ -17,13 +17,23 @@
 
 *Poetry Dotenv Plugin Version :* 0.2.0
 
-*Flask SQL Alchemy Version :* 3.1.1
+*Sqlalchemy Version :* 2.0.28
 
-*Psycopg2 Version :* 2.9.9
+*Mysql-connector-python Version :* 8.3.0
+
+*Poetry-dotenv-plugin Version :* 0.2.0
+
+*Bcrypt Version :* 4.1.2
+
+*Flask-jwt-extended Version :* 4.6.0
+
+*Pytest Version :* 8.1.1
+
+*Pytest-cov Version :* 4.1.0
 
 
 
-
+Python is a high-level programming language commonly used for web development, data analysis, artificial intelligence, and many other applications. It is known for its clean syntax and ease of understanding, as well as its great flexibility. Flask is one of the popular web frameworks for Python. It is designed to create web applications quickly and easily, with a focus on simplicity and flexibility. Flask does not require many external tools or libraries, making it suitable for small to medium-sized projects. Poetry is a dependency management tool for Python projects. It allows you to define your project's dependencies in a pyproject.toml file and manage their installation, updates, and configuration consistently. Poetry is often used in modern Python application development due to its intuitive abilities and seamless integration with other tools in the Python ecosystem. This week, I have build a Flask Banking App for Managing A Bank With Python and it's dependencies.
 
 
 ## Step to Create Python Project with Poetry
@@ -43,3 +53,14 @@
 13. You can create CRUD operation according to project's requirement.
 14. Install bcrypt for securely storing passwords in web applications : `poetry add bcrypt`.
 15. Install flask-jwt-extended for securely transmitting information between parties as a JSON object : `poetry add flask-jwt-extended`.
+16. Install poetry together with pytest to manage project dependencies and run tests consistently in isolated environments : `poetry add pytest`, then run the tests by running on CLI : `poetry run pytest`.
+17. Install pytest-cov to see how well your code is covered by tests, thus helping identify parts of the code that need improved test coverage : `poetry add pytest-cov`.
+
+
+# Documentation API Link 🚀
+You can check the Documentation API by clicking this link : [Link Postman](https://documenter.getpostman.com/view/29004934/2sA2xmWBZb) 
+  
+***
+
+#### Theme by Sarra Nutrisia &#127776;
+If you have any other questions that aren't covered in the documentation, feel free to e-mail &#128233; <sarra.nutrisia@gmail.com>.
