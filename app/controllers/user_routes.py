@@ -1,7 +1,7 @@
-from app.models.user import User
 from flask import Blueprint, request, jsonify
 from app.connectors.mysql_connector import engine
 from sqlalchemy.orm import sessionmaker
+from app.models.user import User
 import bcrypt
 from flask_jwt_extended import create_access_token, jwt_required, unset_jwt_cookies
 
@@ -99,7 +99,7 @@ def get_all_users():
         # Convert users to dictionary
         user_data = [user.to_dict() for user in users]
         
-        return {'users': user_data}, 200
+        return {'users list': user_data}, 200
     
     except Exception as e:
         # Error getting all user's data
